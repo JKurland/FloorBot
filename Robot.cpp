@@ -50,7 +50,7 @@ Robot::Robot(string* data, int tachs, int usds){
 
 	size_t pos1 = 0;
 	size_t pos2 = str.find(" ");
-	length = stof(str.substr(pos1, pos2 - pos1));
+	length = stof(str.substr(pos1, pos2 - pos1), NULL);
 
 	pos1 = pos2;
 	pos2 = str.find(" ", pos1 + 1);
