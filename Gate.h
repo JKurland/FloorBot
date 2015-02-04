@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 using namespace std;
-//YOOOOOOOOOOOOo
 class Packet{
 	int LeftMotor;
 	int RightMotor;
