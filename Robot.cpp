@@ -101,8 +101,8 @@ Robot::Robot(string* data, int tachs, int usds){
 	//Tribometer
 
 	pos1 = pos2;
-	pos2 = str.find(" ", pos1 + 1);
-	in = stoi(str.substr(pos1, pos2 - pos1));
+	pos2 = str.rfind(" ");
+	in = stoi(str.substr(pos2));
 
 	Trib trib(in);
 	Position pos(0, 0, 0);

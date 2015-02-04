@@ -21,7 +21,7 @@ float Pos2Ang(Position* Target, Position* current){
 	float y = Target->y - current->y;
 	if (x == 0 & y > 0) { return (pi/2); }
 	else if (x == 0 & y < 0) { return (3*pi/2); }
-	float ang = atan(abs(y) / abs(x));
+	float ang = atan(sqrt(y*y / x*x));
 	if (x>0 & y <= 0) { return 2 * pi - ang; } //quad 4
 	else if (x < 0 & y <= 0) { return (ang + pi / 2); } //3
 	else if (x < 0 & y >= 0) { return (pi / 2 - ang); } //2
