@@ -3,6 +3,7 @@
 
 
 #include<vector>
+#include<string>
 using namespace std;
 
 
@@ -51,7 +52,9 @@ public:
 	Trib trib;
 	vector<Tach> tach;
 	vector<USD> usd;
-	Robot(float, float, float, Trib*, vector<Tach>*, vector<USD>*);
+	Robot(string*, int, int);
 	Robot();
 };
+
+bool stob(string);
 #endif
