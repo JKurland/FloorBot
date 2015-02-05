@@ -54,11 +54,11 @@ Robot::Robot(string* data, int tachs, int usds){
 
 	pos1 = pos2;
 	pos2 = str.find(" ", pos1 + 1);
-	width = stof(str.substr(pos1, pos2 - pos1));
+	width = stof(str.substr(pos1, pos2 - pos1), NULL);
 
 	pos1 = pos2;
 	pos2 = str.find(" ", pos1 + 1);
-	rot = stof(str.substr(pos1, pos2 - pos1));
+	rot = stof(str.substr(pos1, pos2 - pos1), NULL);
 
 	//Tachometers
 	for (int i = 0; i < tachs; i++){
