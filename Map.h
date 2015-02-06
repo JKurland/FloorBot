@@ -7,6 +7,7 @@ class Point{
   float x;
   float y;
   float ang(float x, float y); //angle to a Point from another point realtive to the x axis
+  float distance(float x, float y);
 }
 
 class Wall{
@@ -25,5 +26,6 @@ class Map{
 }
 
 void UpdateMap(Robot*);
+float cost(Point p1, Point p2, Point pc);
 
 #endif
