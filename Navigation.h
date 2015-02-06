@@ -8,8 +8,8 @@ using namespace std;
 
 class Command{
 public:
-	float turn;
-	float go;
+	int left;
+	int right;
 	Command(float, float);
 	Command();
 };
