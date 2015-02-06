@@ -31,7 +31,7 @@ public:
 	float reading;
 	Position offset;
 	int pin;
-	USD(Position*, int);
+	USD(Position, int);
 	USD();
 };
 
@@ -52,7 +52,6 @@ public:
 	Trib trib;
 	vector<Tach> tach;
 	vector<USD> usd;
-	Robot(string*, int, int);
 	Robot();
 };
 
