@@ -3,16 +3,29 @@
 
 const float pi = 3.14159;
 
-Command::Command(float Turn, float Go){
-	turn = Turn;
-	go = Go;
+Command::Command(int Left, int Right){
+	left = Left;
+	right = Right;
 };
 
 Command::Command(){};
 
-Command Navigate(Position* Target, Robot* Hasard){
-
-	Command com(Pos2Ang(Target, &Hasard->pos) - Hasard->pos.ang, Distance(Target, &Hasard->pos));
+Command Navigate(Position* Target, Robot* Hasard, float margin){
+	Command com;
+	float ang = Pos2Ang(Target, &Hasard->pos) - Hasard->pos.ang;
+	float dist = Distance(Target, &Hasard->pos));
+	if (ang * dist > margin){
+		com = Command(0,1);
+	}
+	else if(ang*dist < -1*margin){
+		com = Command(1,0);
+	}
+	else {com = Command(1,1);}
+	
+	if(dist < margin){
+		com.complete = 1;
+	}
+	else {com.complete = 0;}
 	return com;
 };
 
