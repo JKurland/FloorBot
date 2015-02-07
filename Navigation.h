@@ -11,7 +11,7 @@ public:
 	int left;
 	int right;
 	bool complete;
-	Command(float, float);
+	Command(int, int);
 	Command();
 };
 

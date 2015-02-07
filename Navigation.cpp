@@ -13,14 +13,14 @@ Command::Command(){};
 Command Navigate(Position* Target, Robot* Hasard, float margin){
 	Command com;
 	float ang = Pos2Ang(Target, &Hasard->pos) - Hasard->pos.ang;
-	float dist = Distance(Target, &Hasard->pos));
+	float dist = Distance(Target, &Hasard->pos);
 	if (ang * dist > margin){
-		com = Command(0,1);
+		com = Command(0,255);
 	}
 	else if(ang*dist < -1*margin){
-		com = Command(1,0);
+		com = Command(255,0);
 	}
-	else {com = Command(1,1);}
+	else {com = Command(255,255);}
 	
 	if(dist < margin){
 		com.complete = 1;
